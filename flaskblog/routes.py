@@ -17,6 +17,14 @@ def home():
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
     return render_template('home.html', posts=posts)
 
+@app.route('/delete')
+def delete():
+    posts = Post.query.all()
+    for post in posts:
+        db.session.delete(post)
+        db.session.commit()
+    flash('All post deleted', 'success')
+    return redirect(url_for('home'))
 
 @app.route("/about")
 def about():
