@@ -135,7 +135,7 @@ def new_post():
                            form=form, legend='New Post')
     """
     return render_template('create_post.html', title='New X-ray Prediction',
-                           form=form, legend='New Post')
+                           form=form, legend='HealthBot')
 
 @app.route("/post/<int:post_id>")
 def post(post_id):

@@ -11,9 +11,9 @@
             </div>
             <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
-            <img class="rounded-circle account-img" src="{{ image_file }}">
-            <!--
-            <img class="img-rounded" alt="Cinque Terre" width="304" height="236" src="static\Xray\default.jpg"> -->
+            <!--<img class="rounded-circle account-img" src="{{ image_file }}"> -->
+
+            <img class="img-rounded" alt="Cinque Terre" width="304" height="236" src="static\Xray\default.jpg">
           </div>
         </article>
     {% endfor %}
